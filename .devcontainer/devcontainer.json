@@ -1,0 +1,13 @@
+{
+  "name": "agent-friendly-ui",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "openai.chatgpt",
+        "shd101wyy.markdown-preview-enhanced"
+      ]
+    }
+  }
+}

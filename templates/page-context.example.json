@@ -1,0 +1,19 @@
+{
+  "page": "invoice-create",
+  "title": "Create Invoice",
+  "workflow": "create-and-send-invoice",
+  "step": 1,
+  "totalSteps": 2,
+  "currentState": "idle",
+  "availableActions": [
+    "invoice-form-submit",
+    "invoice-form-cancel"
+  ],
+  "requiredFields": [
+    "field-client-name",
+    "field-amount",
+    "field-due-date"
+  ],
+  "agentNotes": "The due date field uses a native date input. Use ISO 8601 format (YYYY-MM-DD) when setting the value programmatically.",
+  "record": null
+}

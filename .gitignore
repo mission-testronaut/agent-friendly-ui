@@ -1,0 +1,22 @@
+node_modules/
+dist/
+*.js.map
+
+# TypeScript build info cache
+*.tsbuildinfo
+
+# Test coverage output
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local

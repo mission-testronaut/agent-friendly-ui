@@ -1,0 +1,114 @@
+{
+  "specVersion": "0.1",
+  "name": "Acme Invoicing",
+  "baseUrl": "https://app.acmeinvoicing.example.com",
+  "description": "Invoice creation, management, and payment collection application.",
+
+  "agentMode": {
+    "paramName": "agentMode",
+    "paramValue": "true"
+  },
+
+  "pages": [
+    {
+      "id": "login",
+      "title": "Login",
+      "path": "/login",
+      "description": "Authenticate with email and password. Fields: email, password. Actions: login-submit."
+    },
+    {
+      "id": "dashboard",
+      "title": "Dashboard",
+      "path": "/dashboard",
+      "description": "Overview of recent activity. Actions: nav-create-invoice, nav-invoices, nav-clients."
+    },
+    {
+      "id": "invoice-list",
+      "title": "Invoices",
+      "path": "/invoices",
+      "description": "View, filter, search, and manage all invoices. Actions: create-invoice-button, invoice-filter-status."
+    },
+    {
+      "id": "invoice-create",
+      "title": "Create Invoice",
+      "path": "/invoices/new",
+      "description": "Create a new invoice. Required fields: field-client-name, field-amount, field-due-date. Actions: invoice-form-submit, invoice-form-cancel."
+    },
+    {
+      "id": "invoice-detail",
+      "title": "Invoice Detail",
+      "path": "/invoices/:id",
+      "description": "View, edit, send, or delete a single invoice. Actions: invoice-edit, invoice-send, invoice-delete."
+    },
+    {
+      "id": "invoice-edit",
+      "title": "Edit Invoice",
+      "path": "/invoices/:id/edit",
+      "description": "Edit an existing invoice. Required fields: field-client-name, field-amount, field-due-date. Actions: invoice-edit-save, invoice-edit-cancel."
+    },
+    {
+      "id": "client-list",
+      "title": "Clients",
+      "path": "/clients",
+      "description": "View and manage clients. Actions: create-client-button."
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "path": "/settings",
+      "description": "Account and application settings."
+    }
+  ],
+
+  "workflows": [
+    {
+      "id": "create-and-send-invoice",
+      "title": "Create and send an invoice",
+      "description": "Creates a new invoice, sets required fields, submits it, and sends it to the client.",
+      "entryPage": "invoice-create",
+      "steps": [
+        {
+          "step": 1,
+          "pageId": "invoice-create",
+          "description": "Fill in invoice details (client name, amount, due date) and submit."
+        },
+        {
+          "step": 2,
+          "pageId": "invoice-detail",
+          "description": "Confirm the invoice was created. Click 'Send Invoice' to send."
+        }
+      ]
+    },
+    {
+      "id": "edit-invoice",
+      "title": "Edit an existing invoice",
+      "description": "Navigates to an invoice, opens edit mode, makes changes, and saves.",
+      "entryPage": "invoice-list",
+      "steps": [
+        {
+          "step": 1,
+          "pageId": "invoice-list",
+          "description": "Find the target invoice in the list."
+        },
+        {
+          "step": 2,
+          "pageId": "invoice-detail",
+          "description": "Open the invoice detail page."
+        },
+        {
+          "step": 3,
+          "pageId": "invoice-edit",
+          "description": "Edit fields and save."
+        }
+      ]
+    }
+  ],
+
+  "authentication": {
+    "required": true,
+    "loginPage": "login",
+    "description": "Session cookie-based authentication. Navigate to /login, fill in email and password, and submit. All other pages redirect to /login if unauthenticated."
+  },
+
+  "agentNotes": "The application uses a single-page architecture. URL changes are reflected in the browser history but the page does not fully reload. Wait for data-agent-state transitions to 'idle' or 'success' before assuming an action completed."
+}
