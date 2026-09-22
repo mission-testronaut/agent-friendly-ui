@@ -2,7 +2,7 @@
 
 **Building web interfaces that AI browser agents can understand, operate, and test efficiently.**
 
-**Agent-Friendly UI** is an official [Testronaut](https://testronaut.app) initiative. Testronaut is an **agentic end-to-end testing** framework that uses AI agents and Playwright to execute complete user journeys in real browsers.
+**Agent-Friendly UI** is an official [Testronaut™](https://testronaut.app) initiative. Testronaut™ is an **agentic end-to-end testing** framework that uses AI agents and Playwright to execute complete user journeys in real browsers.
 
 This project collects practical design patterns, anti-patterns, specifications, benchmarks, and utilities for making interfaces more legible and operable for AI browser agents without sacrificing accessibility or human usability.
 
