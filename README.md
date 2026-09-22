@@ -1,8 +1,14 @@
-# Agent-Friendly UI
+# Agent-Friendly UI — Design Patterns for AI Agents and Agentic Testing
 
-**Building interfaces that autonomous agents can understand and operate**
+**Building web interfaces that AI browser agents can understand, operate, and test efficiently.**
 
-> Agent-Friendly UI is a Testronaut initiative.
+**Agent-Friendly UI** is an official [Testronaut](https://testronaut.app) initiative. Testronaut is an **agentic end-to-end testing** framework that uses AI agents and Playwright to execute complete user journeys in real browsers.
+
+This project collects practical design patterns, anti-patterns, specifications, benchmarks, and utilities for making interfaces more legible and operable for AI browser agents without sacrificing accessibility or human usability.
+
+**Testronaut ecosystem:** [Testronaut](https://testronaut.app) · [CLI](https://github.com/mission-testronaut/testronaut-cli) · [Documentation](https://docs.testronaut.app) · [Mission Control](https://mission.testronaut.app)
+
+**Background:** [Your Frontend Has a New User Type](https://testronaut.app/blog/your-frontend-has-a-new-user-type)
 
 ---
 
@@ -28,7 +34,7 @@ Agent-friendly UI design sits at the intersection of three established practices
 - **Testability** — stable selectors, predictable DOM structure, and explicit state make automated testing reliable
 - **Frontend architecture** — clear component contracts, consistent naming, and structured data benefit humans and machines alike
 
-Early benchmark data suggest that interface structure materially affects agent execution time and token consumption. A UI designed with agent legibility in mind can reduce agent task duration and cost compared to the same task on a poorly structured interface. Agents are emerging as a new group of users that front-end developers and designers need to consider when creating apps and websites.
+Early benchmark data, motivated by improving the efficiency of agentic end-to-end testing with Testronaut, suggest that interface structure materially affects agent execution time and token consumption. A UI designed with agent legibility in mind can reduce agent task duration and cost compared to the same task on a poorly structured interface. Agents are emerging as a new group of users that front-end developers and designers need to consider when creating apps and websites.
 
 ---
 
@@ -163,4 +169,6 @@ Agent-friendly UI is not a replacement for accessibility — it is an extension 
 
 ---
 
-MIT License · Agent-Friendly UI is a Testronaut initiative.
+MIT License · Agent-Friendly UI is a [Testronaut](https://testronaut.app) initiative.
+
+[Testronaut — Agentic End-to-End Testing](https://testronaut.app) · [Docs](https://docs.testronaut.app) · [CLI](https://github.com/mission-testronaut/testronaut-cli) · [npm](https://www.npmjs.com/package/testronaut)
