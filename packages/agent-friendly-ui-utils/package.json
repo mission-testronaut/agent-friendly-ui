@@ -1,7 +1,7 @@
 {
   "name": "@agent-friendly-ui/utils",
   "version": "0.1.0",
-  "description": "TypeScript utilities for generating agent-friendly HTML attributes",
+  "description": "TypeScript utilities for building agent-friendly web interfaces for AI browser agents and agentic testing.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -20,6 +20,13 @@
   },
   "keywords": [
     "agent-friendly",
+    "agent-friendly-ui",
+    "agentic-ui",
+    "ai-agents",
+    "browser-agents",
+    "agentic-testing",
+    "llm",
+    "playwright",
     "accessibility",
     "automation",
     "testing",
@@ -39,5 +46,11 @@
     "testMatch": [
       "**/tests/**/*.test.ts"
     ]
+  },
+  "homepage": "https://github.com/mission-testronaut/agent-friendly-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mission-testronaut/agent-friendly-ui.git",
+    "directory": "packages/agent-friendly-ui-utils"
   }
 }
